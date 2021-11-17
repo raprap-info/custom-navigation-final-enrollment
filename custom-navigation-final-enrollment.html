@@ -1,0 +1,112 @@
+<head>
+<style>
+button{
+font-size:12px;
+}
+
+.dropbtns {
+  background-color: #cf9a0a;
+  color: white;
+  padding: 13px;
+  font-size: 11px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtns:hover, .dropbtn:focus {
+  background-color: #cf9a0a;
+}
+
+.dropdowns {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdowns-contents {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdowns-contents a {
+  color: black;
+  padding: 15px 16px;
+  font-size:12px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdowns a:hover {background-color: #cf9a0a; color:#fff;}
+
+.shows {display: block;}
+</style>
+</head>
+<body>
+
+   <button onclick="redirect1()" style="background-color:#007cba;"> BACK</button>
+ 
+   <button onclick="redirect2()">  MDiv, MABS, MATL DEGREES</button>
+
+  <button  onclick="redirect3()">  PIM CERT</button> 
+ 
+   <button onclick="redirect4()"> CERTIFICATE PROGRAMS </button> 
+ 
+
+<div class="dropdowns">
+  <button onclick="myFunctions()" class="dropbtns">AGST PHD</button>
+  <div id="myDropdown" class="dropdowns-contents">
+      <a href="https://registrar.igsl.asia/finalizing-enrollment/dmin-tl/">DMIN TL</a>
+    <a href="https://registrar.igsl.asia/finalizing-enrollment/agst-phd-peace-studies/" >AGST PEACE (PS)</a>
+    <a href="https://registrar.igsl.asia/finalizing-enrollment/agst-phd-theology/"  >AGST THEOLOGICAL (ThM)</a>
+  </div>
+</div>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunctions() {
+  document.getElementById("myDropdown").classList.toggle("shows");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtns')) {
+    var dropdowns = document.getElementsByClassName("dropdowns-contents");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('shows')) {
+        openDropdown.classList.remove('shows');
+      }
+    }
+  }
+}
+</script>
+
+<script>
+        function redirect1(){
+            location.replace('https://registrar.igsl.asia/');
+        }
+  function redirect2(){
+            location.replace('https://registrar.igsl.asia/finalizing-enrollment/mdiv-mabs-matl/');
+        }
+  function redirect3(){
+            location.replace('https://registrar.igsl.asia/finalizing-enrollment/pim-cert/');
+        }
+function redirect4(){
+            location.replace('https://registrar.igsl.asia/finalizing-enrollment/thm-cert-others/');
+        }
+function redirect5(){
+            location.replace('https://registrar.igsl.asia/finalizing-enrollment/agst-phd/');
+        }
+function redirect6(){
+            location.replace('https://registrar.igsl.asia/finalizing-enrollment/agst-phd-theology/');
+        }
+    </script>
+</body>
+
+</html>
