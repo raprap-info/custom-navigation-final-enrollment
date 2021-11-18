@@ -1,20 +1,19 @@
 <head>
 <style>
 button{
-font-size:12px;
+font-size:10px;
 }
 
 .dropbtns {
-  background-color: #cf9a0a;
-  color: white;
-  padding: 13px;
-  font-size: 11px;
+  
+
   border: none;
-  cursor: pointer;
+ cursor:pointer;
+ 
 }
 
 .dropbtns:hover, .dropbtn:focus {
-  background-color: #cf9a0a;
+  color: #cf9a0a;
 }
 
 .dropdowns {
@@ -33,37 +32,47 @@ font-size:12px;
 }
 
 .dropdowns-contents a {
-  color: black;
+  color: #007cba;
   padding: 15px 16px;
   font-size:12px;
   text-decoration: none;
   display: block;
 }
 
-.dropdowns a:hover {background-color: #cf9a0a; color:#fff;}
+
+a{
+text-decoration:none;
+color: #007cba;
+font-size:14px;
+}
+.dropdowns-contents a:hover {background-color: #cf9a0a; color:#fff;}
 
 .shows {display: block;}
 </style>
 </head>
 <body>
 
-   <button onclick="redirect1()" style="background-color:#007cba;"> BACK</button>
- 
-   <button onclick="redirect2()">  MDiv, MABS, MATL DEGREES</button>
+<ul class="breadcrumb">
+<li> <a href="https://registrar.igsl.asia/"> REGISTRAR PAGE </a></li>
+<li> <a href="https://registrar.igsl.asia/finalizing-enrollment/mdiv-mabs-matl/">MDiv, MABS, MATL DEGREES</a></li>
+<li><a href="#" style="cursor:default; color:#bf9f0f;">PIM CERT</a></li>
+<li><a href="https://registrar.igsl.asia/finalizing-enrollment/thm-cert-others/">CERTIFICATE PROGRAMS</a></li>
+<li>
 
-  <button  onclick="redirect3()">  PIM CERT</button> 
- 
-   <button onclick="redirect4()"> CERTIFICATE PROGRAMS </button> 
- 
 
 <div class="dropdowns">
-  <button onclick="myFunctions()" class="dropbtns">AGST PHD</button>
+  <a style="text-decoration:none;" onclick="myFunctions()" class="dropbtns">AGST PHD</a>
   <div id="myDropdown" class="dropdowns-contents">
       <a href="https://registrar.igsl.asia/finalizing-enrollment/dmin-tl/">DMIN TL</a>
     <a href="https://registrar.igsl.asia/finalizing-enrollment/agst-phd-peace-studies/" >AGST PEACE (PS)</a>
     <a href="https://registrar.igsl.asia/finalizing-enrollment/agst-phd-theology/"  >AGST THEOLOGICAL (ThM)</a>
   </div>
 </div>
+</li>
+</ul>
+
+
+
 
 <script>
 /* When the user clicks on the button, 
