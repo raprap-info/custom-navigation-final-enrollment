@@ -1,121 +1,107 @@
 <head>
-<style>
-button{
-font-size:10px;
-}
-
-.dropbtns {
-  
-
-  border: none;
- cursor:pointer;
- 
-}
-
-.dropbtns:hover, .dropbtn:focus {
-  color: #cf9a0a;
-}
-
-.dropdowns {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdowns-contents {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdowns-contents a {
-  color: #007cba;
-  padding: 15px 16px;
-  font-size:12px;
-  text-decoration: none;
-  display: block;
-}
-
-
-a{
-text-decoration:none;
-color: #007cba;
-font-size:14px;
-}
-.dropdowns-contents a:hover {background-color: #cf9a0a; color:#fff;}
-
-.shows {display: block;}
-</style>
-</head>
-<body>
-
-<ul class="breadcrumb">
-<li> <a href="https://registrar.igsl.asia/"> REGISTRAR PAGE </a></li>
-<li> <a href="https://registrar.igsl.asia/finalizing-enrollment/mdiv-mabs-matl/">MDiv, MABS, MATL DEGREES</a></li>
-<li><a href="#" style="cursor:default; color:#bf9f0f;">PIM CERT</a></li>
-<li><a href="https://registrar.igsl.asia/finalizing-enrollment/thm-cert-others/">CERTIFICATE PROGRAMS</a></li>
-<li>
-
-
-<div class="dropdowns">
-  <a style="text-decoration:none;" onclick="myFunctions()" class="dropbtns">AGST PHD</a>
-  <div id="myDropdown" class="dropdowns-contents">
-      <a href="https://registrar.igsl.asia/finalizing-enrollment/dmin-tl/">DMIN TL</a>
-    <a href="https://registrar.igsl.asia/finalizing-enrollment/agst-phd-peace-studies/" >AGST PEACE (PS)</a>
-    <a href="https://registrar.igsl.asia/finalizing-enrollment/agst-phd-theology/"  >AGST THEOLOGICAL (ThM)</a>
-  </div>
-</div>
-</li>
-</ul>
-
-
-
-
-<script>
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myFunctions() {
-  document.getElementById("myDropdown").classList.toggle("shows");
-}
-
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtns')) {
-    var dropdowns = document.getElementsByClassName("dropdowns-contents");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('shows')) {
-        openDropdown.classList.remove('shows');
+    <style>
+    button{
+    font-size:10px;
+    }
+    
+    .dropbtns {
+      
+    
+      border: none;
+     cursor:pointer;
+     
+    }
+    
+    .dropbtns:hover, .dropbtn:focus {
+      color: #cf9a0a;
+    }
+    
+    .dropdowns {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropdowns-contents {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      overflow: auto;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdowns-contents a {
+      color: #007cba;
+      padding: 15px 16px;
+      font-size:12px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    
+    a{
+    text-decoration:none;
+    color: #007cba;
+    font-size:14px;
+    }
+    .dropdowns-contents a:hover {background-color: #cf9a0a; color:#fff;}
+    
+    .shows {display: block;}
+    </style>
+    </head>
+    <body>
+    
+    <ul class="breadcrumb">
+    <li> <a href="registrar.igsl.asia/office-of-the-registrar/"> HOME </a></li>
+    <li> <a href="https://registrar.igsl.asia/announcements-and-schedules/"> ANNOUNCEMENTS & SCHEDULES  </a></li>
+    <li><a href="https://registrar.igsl.asia/enrollment/"  style=" color:#bf9f0f;"  > ENROLLMENT</a></li>
+    <li>
+    
+    <div class="dropdowns">
+      <a onclick="myFunctions()" class="dropbtns" >ACADEMIC PROCEDURES </a>
+      <div id="myDropdown" class="dropdowns-contents">
+        <a href="https://registrar.igsl.asia/other-registrar-services/adding-dropping-courses/">ADDING & DROPPING</a>
+        <a href="https://registrar.igsl.asia/other-registrar-services/class-extension/" >CLASS EXTENSION</a>
+        <a href="https://registrar.igsl.asia/other-registrar-services/shifting-of-degree-program/"  >SHIFTING OF PROGRAM &/ Major</a>
+        <a href="https://registrar.igsl.asia/other-registrar-services/study-leave-application/"  >STUDY-LEAVE APPLICATION</a>
+        <a href="https://registrar.igsl.asia/other-registrar-services/application-for-graduation/"  >APPLICATION FOR GRADUATION</a>
+      </div>
+    </div>
+    </li>
+    <li><a href="https://registrar.igsl.asia/other-registrar-services/request-form/">REQUESTS</a></li>
+    <li><a href="https://registrar.igsl.asia/contact-us/">CONTACT US</a></li>
+    
+    </li>
+    </ul>
+    
+    
+    
+    
+    <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunctions() {
+      document.getElementById("myDropdown").classList.toggle("shows");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtns')) {
+        var dropdowns = document.getElementsByClassName("dropdowns-contents");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('shows')) {
+            openDropdown.classList.remove('shows');
+          }
+        }
       }
     }
-  }
-}
-</script>
-
-<script>
-        function redirect1(){
-            location.replace('https://registrar.igsl.asia/');
-        }
-  function redirect2(){
-            location.replace('https://registrar.igsl.asia/finalizing-enrollment/mdiv-mabs-matl/');
-        }
-  function redirect3(){
-            location.replace('https://registrar.igsl.asia/finalizing-enrollment/pim-cert/');
-        }
-function redirect4(){
-            location.replace('https://registrar.igsl.asia/finalizing-enrollment/thm-cert-others/');
-        }
-function redirect5(){
-            location.replace('https://registrar.igsl.asia/finalizing-enrollment/agst-phd/');
-        }
-function redirect6(){
-            location.replace('https://registrar.igsl.asia/finalizing-enrollment/agst-phd-theology/');
-        }
     </script>
-</body>
-
-</html>
+    
+    
+    
+    </body>
+    
+    </html>
